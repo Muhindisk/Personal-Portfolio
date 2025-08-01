@@ -681,8 +681,21 @@ footer {
         scroll-padding-top: 70px; /* or your mobile header height */
     }
     nav {
+        display: flex;
+        align-items: center;
+        gap: 0; /* Remove gap so logo stays left */
+        justify-content: flex-start;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+    }
+    .logo {
+        flex: 0 0 auto;
+        margin-right: 1rem;
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background: rgba(24, 26, 32, 0.95); /* Optional: match header bg */
+        padding-right: 0.5rem;
     }
     .nav-links {
         display: flex;
@@ -692,7 +705,7 @@ footer {
         padding-bottom: 0.5rem;
         margin: 0;
         width: max-content;
-        min-width: 100vw;
+        min-width: 0;
     }
     .nav-links li {
         flex: 0 0 auto;
