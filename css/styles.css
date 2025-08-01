@@ -665,16 +665,16 @@ footer {
         -webkit-overflow-scrolling: touch;
     }
     .logo {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
+        /* Remove or comment out these lines for a horizontal logo */
+        /* writing-mode: vertical-rl; */
+        /* text-orientation: mixed; */
         font-size: 1.2rem;
-        padding: 0.5rem 0.2rem 0.5rem 0;
-        height: 100px;
+        padding: 0.5rem 0.7rem 0.5rem 0;
         margin-right: 0.5rem;
         background: rgba(24, 26, 32, 0.95);
         border-radius: 8px;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         flex: 0 0 auto;
         position: sticky;
