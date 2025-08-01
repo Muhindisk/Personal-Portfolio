@@ -6,7 +6,9 @@
 }
 
 body {
-    background: #111317;
+    background: linear-gradient(-45deg, #f3ec78, #af4261, #43cea2, #185a9d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #e0e3ea;
     font-family: 'Roboto', 'Open Sans', 'Source Sans Pro', Arial, sans-serif;
     font-size: 17px;
@@ -19,12 +21,20 @@ body {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px; /* Adjust this value to match or slightly exceed your header height */
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 /* =================== SECTION STYLES =================== */
@@ -669,5 +679,23 @@ footer {
     }
     html {
         scroll-padding-top: 70px; /* or your mobile header height */
+    }
+    nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        margin: 0;
+        width: max-content;
+        min-width: 100vw;
+    }
+    .nav-links li {
+        flex: 0 0 auto;
+        white-space: nowrap;
     }
 }
